@@ -10,58 +10,61 @@
 
 
     <script>
+        "use strict";
+// 3. Patikrinkite, ar iš trijų įvestų trikampio kraštinių galima sudaryti trikampį.
 
-            //patikrinti ar is triju trikampio krastiniu galima sudaryti trikampi
-            //patikrinti yra lygiakrasti, lygiasonis ar ivairiakrastis, statusis bukasis ar smailusis
+// 4. Papildykite 3 užduotį:
+//    *Patikrinkite, ar trikampis yra lygiakraštis, lygiašonis ar įvairiakraštis
+//    *Patikrinkite, ar trikampis yra statusis, bukasis ar smailusis.
 
-            //procedurinis - visus zingsnius surasome is eiles
-
-            var trikampis = [3,4,5]; //trikampis statusis, ivairiakrastis
-          // a < b+c ; b < a+c; c < a+b; 
-
-          if((trikampis[0] < trikampis[1]+trikampis[2]) && (trikampis[1] < trikampis[0]+trikampis[2]) && (trikampis[2] < trikampis[0]+trikampis[1])) {
-                console.log('trikampi sudaryti galime');
-                //ivairiakrasti - kiekviena krastine skirtinga
-                //lygikrastis - visos lygios
-                //Lygiasonis - bent dvi is triju vienodos
-
-            var a = trikampis[0];
-            var b = trikampis[1];
-            var c = trikampis[2];
-
-                if(a != b && b != c && c != a) { //ivairiakrastis
-                    console.log('trikampis yra ivairiakrastis');
-                } else if (a==b && b==c && c==a) { //lygiakrastis
-                    console.log('Trikampis yra lygiakrastis');
-                } else {
-                    console.log('trikampis yra lygiasonis');
-                }
-
-                //bukasis a2 + b2 > c2
-                // smailusis a2 + b2 < c2
-                
-                if( (a*a)+(b*b) ) == c*c ) || (c*c + b*b == a*a) || (c*c + a*a == b*b) ) {
-                    
-                    console.log('trikampis yra statusis');
-                }
-                else if( (a*a)+(b*b) ) < (c*c) || (c*c + b*b < a*a) || (c*c + a*a < b*b) ) {  
-                    console.log('trikampis yra bukasis'); 
-                }
-                    
-                    else {
-                        console.log('trikampis yra smailusis');
-                     }
+    //Procedurinis
+    var trikampis = [3,4,5]; // trikampis statusis, ivariakrastis
+    // var trikampis = [5,4,3];   
+    // var trikampis = [5,3,4];                       //
+    // a < b+c 
+    // b < a+c 
+    // c < b+a
 
 
-          
-          else {
-              console.log('trikampio sudaryti negalime');
-          }
+    if((trikampis[0] < trikampis[1]+trikampis[2]) && (trikampis[1] < trikampis[0]+trikampis[2]) && (trikampis[2] < trikampis[1]+trikampis[0])) {
+        console.log("Trikampi sudaryti galime");
+        //ivariakrastis - kiekviena krastine skirtinga
+        // lygiakrastis - visos lygios
+        //lygiasonis - bent dvi is triju vienodos
+        var a = trikampis[0];
+        var b = trikampis[1];
+        var c = trikampis[2];
+        
+        //pagal krastine
+        if(a != b && b != c && c != a) {// ivairiakrastis
+            console.log("Trikampis yra ivairiakrastis");
+        } else if(a==b && b==c && a==c) {// lygiakrastis
+            
+            console.log("Trikampis yra lygiakrastis");
+        } else { //lygiasonis
+            console.log("Trikampis yra lygiasonis")
+        }
+
+        //pagal kampa
+        //statusis a2 + b2 = c2
+        //  bukasis a2 + b2 < c2
+        // smailusis a2 + b2 > c2
+        if( (a*a)+(b*b) == (c*c) || (c*c + b*b == a*a) || (c*c + a*a == b*b)) {
+            console.log("Trikampis yra statusis");
+        } else if((a*a)+(b*b) < (c*c) || (c*c)+(b*b) < (a*a) || (a*a)+(c*c) < (b*b)) {
+            console.log("Trikampis yra bukasis");
+        } 
+        else {
+            console.log("Trikampis yra smailusis");
+        }
+        
+
+    } else {
+        console.log("Trikampio sudaryti negalime");
+    }
 
 
-
-            //funkcinis
-
+    //Funkcinis
 
     </script>
     
