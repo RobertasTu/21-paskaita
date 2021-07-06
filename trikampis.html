@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21 paskaita trikampis</title>
+</head>
+<body>
+
+
+    <script>
+
+            //patikrinti ar is triju trikampio krastiniu galima sudaryti trikampi
+            //patikrinti yra lygiakrasti, lygiasonis ar ivairiakrastis, statusis bukasis ar smailusis
+
+            //procedurinis - visus zingsnius surasome is eiles
+
+            var trikampis = [3,4,5]; //trikampis statusis, ivairiakrastis
+          // a < b+c ; b < a+c; c < a+b; 
+
+          if((trikampis[0] < trikampis[1]+trikampis[2]) && (trikampis[1] < trikampis[0]+trikampis[2]) && (trikampis[2] < trikampis[0]+trikampis[1])) {
+                console.log('trikampi sudaryti galime');
+                //ivairiakrasti - kiekviena krastine skirtinga
+                //lygikrastis - visos lygios
+                //Lygiasonis - bent dvi is triju vienodos
+
+            var a = trikampis[0];
+            var b = trikampis[1];
+            var c = trikampis[2];
+
+                if(a != b && b != c && c != a) { //ivairiakrastis
+                    console.log('trikampis yra ivairiakrastis');
+                } else if (a==b && b==c && c==a) { //lygiakrastis
+                    console.log('Trikampis yra lygiakrastis');
+                } else {
+                    console.log('trikampis yra lygiasonis');
+                }
+
+                //bukasis a2 + b2 > c2
+                // smailusis a2 + b2 < c2
+                
+                if( (a*a)+(b*b) ) == c*c ) || (c*c + b*b == a*a) || (c*c + a*a == b*b) ) {
+                    
+                    console.log('trikampis yra statusis');
+                }
+                else if( (a*a)+(b*b) ) < (c*c) || (c*c + b*b < a*a) || (c*c + a*a < b*b) ) {  
+                    console.log('trikampis yra bukasis'); 
+                }
+                    
+                    else {
+                        console.log('trikampis yra smailusis');
+                     }
+
+
+          
+          else {
+              console.log('trikampio sudaryti negalime');
+          }
+
+
+
+            //funkcinis
+
+
+    </script>
+    
+</body>
+</html>
